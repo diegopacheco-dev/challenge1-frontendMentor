@@ -6,56 +6,67 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./estilos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
 
   <title>Frontend Mentor | Article preview component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+
 </head>
 <body>
-  <main>
-    <section>
+  <main class="main">
 
-      <div class="section__image">
-       <img src="images/drawers.jpg" alt="foto de armario">
-      </div>
 
-      <div class="section__content">
+    <div class="card__wrapper">
 
-        <div class="content__text">
-          <h2>
+      <figure class="card__image">
+      </figure>
+
+      <div class="card__info">
+        <div class="info__wrapper">
+          <h2 class="card__title">
             Shift the overall look and feel by adding these wonderful 
             touches to furniture in your home
           </h2>
-          <p>
+
+          <p class="card__text">
             Ever been in a room and felt like something was missing? Perhaps 
           it felt slightly bare and uninviting. I’ve got some simple tips 
           to help you make any room feel complete.
           </p>
         </div>
+          
 
-        <div class="content__autor">
-          <div class="autor__photo">
-            <img src="images/avatar-michelle.jpg" alt="" width="50">
+          <div class="autor">
+            <div class="perfil">
+              <figure class="perfil__photo">
+                <img src="images/avatar-michelle.jpg" alt="" width="50">
+              </figure>
+              <div class="perfil__name">
+                <h4>Michelle Appleton</h4>
+                <p>28 Jun 2020</p>
+              </div>
+            </div>
+            
+            <div class="autor__share">
+              <p>SHARE</p>
+              <div>
+                <i class="fab fa-facebook-square fa-2x"></i>
+                <i class="fab fa-twitter fa-2x"></i>
+                <i class="fab fa-pinterest fa-2x"></i>
+              </div>
+              <button>
+                <i class="fas fa-share fa-2x"></i>
+              </button>
+            </div>
           </div>
-          <div class="autor__name">
-            <h4>Michelle Appleton</h4>
-            <p>28 Jun 2020</p>
-          </div>
-          <div class="autor__share">
-            <button>
-              <img src="image/icon-share.svg" alt="">
-            </button>
-          </div>
-        
-        </div>
 
       </div>
-    </section>
-  </main>
 
+    </div>
+
+
+  </main>
+  <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
 </body>
 </html>

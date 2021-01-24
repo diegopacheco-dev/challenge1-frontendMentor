@@ -1,68 +1,190 @@
+@import "https://fonts.google.com/specimen/Manrope";
+
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-size: 13px;
+    font-family: 'Manrope', sans-serif;
 }
 
-main {
-    min-width: 1440px;
+body {
+    background-color: hsl(210, 46%, 95%);
+}
+
+.main {
     height: 100vh;
-    background-color: #edf2f8;
+    min-height: 700px;
+    max-width: 1440px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-section {
-    background-color:white;
-    width: 700px;
-    height: 250px;
+.card__wrapper {
     display: flex;
-    border-radius: 10px;
-}
-
-.section__image img {
-    width: 100%;
-    height: 100%;
+    width: 75em;
+    height: 30em;
+    border-radius: 1em;
     overflow: hidden;
-
+    background-color: white;
 }
 
-.section__content {
-    padding: 25px;
+.card__image {
+    width: 40%;
+    overflow: hidden;
+    background-image: url(./images/drawers.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.content__text h2 {
-    padding-bottom: 15px;
-    color: darkslategray;
-    font-size: 20px;
-}
-
-.content__text p {
-    padding-bottom: 15px;
-    text-align: justify;
-    font-size: 15px;
-    line-height: 20px;
-}
-
-.content__autor {
+.card__info {
+    width: 60%;
+    padding: 3em;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
-.autor__photo img {
-    width: 50px;
+.card__title {
+    color: hsl(217, 19%, 35%);
+    font-size: 2.2em;
+    line-height: 1.4em;
+}
+
+.card__text {
+    color: hsl(214, 17%, 51%);
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.autor {
+    width: 100%;
+    display: flex;
+    justify-content: space-between  ;
+}
+
+.perfil {
+    display: flex;
+}
+
+.perfil__photo img{
     border-radius: 50%;
-    vertical-align: center;
 }
 
-.autor__name {
-    padding-top: 8px;
-    flex: 1;
-    padding-left: 15px;
+.perfil__name {
+    padding-left: 1.5em;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
-.autor__share {
+.perfil__name h4 {
+    font-size: 1.4em;
+    color: hsl(217, 19%, 35%);
+}
+
+.perfil__name p {
+    font-size: 1.2em;
+    color: hsl(214, 17%, 51%);
+}
+
+.autor__share p {
+    display: none;
+}
+
+.autor__share div {
+    display: none;
+}
+
+.autor__share button {
+    border: none;
+    border-radius: 50%;
+    width: 3.5em;
+    height: 3.5em;
+}
+
+.autor__share button i {
+    color: hsl(217, 19%, 35%);
+}
+
+@media screen and  (max-width: 1024px) {
+    .card__wrapper {
+        width: 25em;
+        height: 40em;
+        flex-direction: column;
+
+    }
+
+    .card__image {
+        height: 40%;
+        width: 100%;
+    }
+
+    .card__info {
+        height: 60%;
+        width: 100%;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
+ 
+    }
+
+    .info__wrapper {
+
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 2em;
+        line-height: 1.6em;
+    }
+
+    .card__title {
+        font-size: 1.3em;
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    .card__text {
+        font-size: 1.2em;
+    }
+    
+    .autor {
+        background: hsl(217, 19%, 35%);
+        height: 5em;
+
+    }
+
+    .perfil {
+        display: none;
+    }
+
+    .autor__share {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+        color: white;
+    }
+
+    .autor__share p {
+        font-size: 1.3em;
+        font-weight: 100;
+        display: block;
+    }
+
+    .autor__share div {
+        display: flex;
+        gap: 1em;
+    }
+
+    .autor__share button {
+        transform: scale(0.8);
+    }
+
+
     
 }
